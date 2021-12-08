@@ -73,6 +73,8 @@ public abstract class Collectie {
 	 * @post | result == old(getElements()[getElements().length - 1])
 	 */
 	public int removeLast() {
+		if (isEmpty())
+			throw new IllegalStateException();
 		int result = elements[(start + size - 1) % elements.length];
 		size--;
 		return result;
@@ -95,7 +97,7 @@ public abstract class Collectie {
 				System.arraycopy(elements, 0, newElements, 0, size);
 			elements = newElements;
 		}
-		elements[size++] = element;
+		elements[(start + size++) % elements.length] = element;
 	}
 	
 }

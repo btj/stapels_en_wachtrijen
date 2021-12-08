@@ -7,7 +7,7 @@ public class CollectieHulp {
 	/**
 	 * @pre | collectie != null
 	 * @mutates | collectie
-	 * @post | result == Arrays.stream(collectie.getElements()).sum()
+	 * @post | result == Arrays.stream(old(collectie.getElements())).sum()
 	 * @post | collectie.isEmpty()
 	 */
 	public static int maakLeegEnGeefSom(Collectie collectie) {
@@ -20,7 +20,7 @@ public class CollectieHulp {
 	/**
 	 * @pre | collectie != null
 	 * @mutates | collectie
-	 * @post | result == Arrays.stream(collectie.getElements()).count()
+	 * @post | result == Arrays.stream(old(collectie.getElements())).count()
 	 * @post | collectie.isEmpty()
 	 */
 	public static int maakLeegEnGeefAantal(Collectie collectie) {

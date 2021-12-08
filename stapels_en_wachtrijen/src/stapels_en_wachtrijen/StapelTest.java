@@ -29,6 +29,16 @@ class StapelTest {
 		stapel.add(2);
 		stapel.add(3);
 		CollectieTest.testCollectie(stapel);
+		
+		stapel.add(10);
+		stapel.add(20);
+		stapel.add(30);
+		CollectieHulpTest.testMaakLeegEnGeefSom(stapel);
+		
+		stapel.add(10);
+		stapel.add(20);
+		stapel.add(30);
+		CollectieHulpTest.testMaakLeegEnGeefAantal(stapel);
 	}
 
 }
